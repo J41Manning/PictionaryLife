@@ -1,18 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:shape="rectangle" >
-
-    <!--  Gradient Bg for listrow -->
-   <gradient
-      android:startColor="#fff"
-      android:centerColor="#e7e7e8"
-      android:endColor="#cccccc"
-      android:angle="270" />
-   <corners
-      android:bottomRightRadius="10dp"
-      android:bottomLeftRadius="10dp"
-      android:topLeftRadius="10dp"
-      android:topRightRadius="10dp"/>
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" >
+		<shape xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:shape="rectangle" >
+		
+		    <!--  Gradient Bg for listrow -->
+		   <gradient
+		      android:startColor="#ccc"
+		      android:centerColor="#fff"
+		      android:endColor="#eee"
+		      android:angle="270" />
+		   <corners
+		      android:bottomRightRadius="10dp"
+		      android:bottomLeftRadius="10dp"
+		      android:topLeftRadius="10dp"
+		      android:topRightRadius="10dp"/>
+		</shape>
+    </item>
+    <item>
+		<shape xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:shape="rectangle" >
+		
+		    <!--  Gradient Bg for listrow -->
+		   <gradient
+		      android:startColor="#eee"
+		      android:centerColor="#fff"
+		      android:endColor="#ccc"
+		      android:angle="270" />
+		   <corners
+		      android:bottomRightRadius="10dp"
+		      android:bottomLeftRadius="10dp"
+		      android:topLeftRadius="10dp"
+		      android:topRightRadius="10dp"/>
+		</shape>
+    </item>
+</selector>

@@ -8,34 +8,100 @@
   <RelativeLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:background="@drawable/background_darkblue" >
+      android:background="#2976B9" >
  
-        <!--  Header  Starts-->
-        <LinearLayout android:id="@+id/header"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dip"
-                android:paddingBottom="5dip">
-                <!-- Logo Start-->
-                <ImageView android:src="@drawable/ic_launcher"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dip"/>
-                <!-- Logo Ends -->
+      <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true" >
 
-                <TextView
-                    android:id="@+id/textView1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Pictionary - Life Edition"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        </LinearLayout>
-        <!--  Header Ends -->
+	        <!--  Header  Starts-->
+	
+	        <LinearLayout
+	            android:id="@+id/header"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:paddingTop="20dip" >
+	
+		       <TextView
+		           android:layout_width="fill_parent"
+		           android:layout_height="wrap_content"
+		           android:gravity="center"
+		           android:textSize="30sp"
+		           android:text="@string/app_title"
+		           android:textColor="#ffffff" />
+	
+	        </LinearLayout>
+	        <!--  Header Ends -->
+	 
+	        <!-- Login Form -->
+	
+	        <LinearLayout
+	            xmlns:android="http://schemas.android.com/apk/res/android"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/header"
+	            android:orientation="vertical"
+	            android:padding="10dip" >
+	
+	          <!--  Username input -->
+	          <EditText android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="20dip"
+	                android:layout_marginLeft="50dip"
+	                android:layout_marginRight="50dip"
+	                android:paddingBottom="10dip"
+	                android:focusable="true"
+	                android:hint="@string/input_username"
+	                android:windowSoftInputMode="stateHidden"
+	                android:paddingTop="10dip"
+	                android:paddingLeft="20dip"
+	                android:background="@layout/rounded_top_edittext"
+	                android:singleLine="true"/>
+	          <!--  Password input -->
+	          <EditText android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:paddingBottom="10dip"
+	                android:inputType="textPassword"
+	                android:hint="@string/input_password"
+	                android:paddingLeft="20dip"
+	                android:paddingTop="10dip"
+	                android:layout_marginLeft="50dip"
+	                android:layout_marginRight="50dip"
+	                android:background="@layout/rounded_bottom_edittext"
+	                android:singleLine="true"/>
+	          <!-- Login button -->
+	
+	          <Button
+	              android:id="@+id/btnLogin"
+	              android:layout_width="fill_parent"
+	              android:layout_height="wrap_content"
+	              android:layout_marginLeft="50dip"
+	              android:layout_marginRight="50dip"
+	              android:layout_gravity="center_horizontal"
+	              android:layout_marginTop="10dip"
+	              android:textColor="#555"
+	              android:background="@layout/button_gradient"
+	              android:text="@string/btn_login" />
+	
+	          <!-- Link to Registration Screen -->
+	          <TextView android:id="@+id/link_to_register"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="40dip"
+	                android:layout_marginBottom="40dip"
+	                android:text="@string/msg_new_user"
+	                android:gravity="center"
+	                android:textSize="20sp"
+	                android:textColor="#FFFFFF"/>
+	 
+	        </LinearLayout>
+	        <!-- Login Form Ends -->
+        
+        </RelativeLayout>
         
         <!-- Footer Start -->
-
         <LinearLayout
             android:id="@+id/footer"
             android:layout_width="fill_parent"
@@ -46,67 +112,5 @@
 
         </LinearLayout>
         <!-- Footer Ends -->
- 
-        <!-- Login Form -->
-        <LinearLayout
-          xmlns:android="http://schemas.android.com/apk/res/android"
-          android:orientation="vertical"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="10dip"
-          android:layout_below="@id/header">
-          <!--  Username input -->
-          <EditText android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dip"
-                android:layout_marginLeft="50dip"
-                android:layout_marginRight="50dip"
-                android:paddingBottom="10dip"
-                android:focusable="true"
-                android:hint="Username..."
-                android:windowSoftInputMode="stateHidden"
-                android:paddingTop="10dip"
-                android:paddingLeft="20dip"
-                android:background="@layout/rounded_top_edittext"
-                android:singleLine="true"/>
-          <!--  Password input -->
-          <EditText android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dip"
-                android:inputType="textPassword"
-                android:hint="Password..."
-                android:paddingLeft="20dip"
-                android:paddingTop="10dip"
-                android:layout_marginBottom="20dip"
-                android:layout_marginLeft="50dip"
-                android:layout_marginRight="50dip"
-                android:background="@layout/rounded_bottom_edittext"
-                android:singleLine="true"/>
-          <!-- Login button -->
-
-          <Button
-              android:id="@+id/btnLogin"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_gravity="center_horizontal"
-              android:layout_marginTop="10dip"
-              android:minWidth="150dip"
-              android:textColor="#555"
-              android:background="@layout/button_gradient"
-              android:text="Login" />
-
-          <!-- Link to Registration Screen -->
-          <TextView android:id="@+id/link_to_register"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dip"
-                android:layout_marginBottom="40dip"
-                android:text="New to Pictionary? Register here"
-                android:gravity="center"
-                android:textSize="20dip"
-                android:textColor="#FFFFFF"/>
- 
-        </LinearLayout>
-        <!-- Login Form Ends -->
   </RelativeLayout>
 </ScrollView>
