@@ -1,4 +1,4 @@
-package com.example.pictionarylogin;
+package edu.msu.life.pictionary;
 
 import android.os.Bundle;
 import android.app.Activity;
