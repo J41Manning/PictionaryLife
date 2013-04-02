@@ -9,8 +9,17 @@
         android:layout_height="wrap_content"
         android:background="#2976B9"
         android:descendantFocusability="beforeDescendants"
-android:focusableInTouchMode="true"  >
-              
+		android:focusableInTouchMode="true"  >
+         
+        <!-- Footer Start -->
+        <LinearLayout android:id="@+id/footer"
+                android:layout_width="fill_parent"
+                android:layout_height="90dip"
+                android:background="@layout/footer_repeat"
+                android:layout_alignParentBottom="true">
+        </LinearLayout>
+        <!-- Footer Ends -->
+        
         <RelativeLayout
             android:layout_width="350dp"
             android:layout_height="wrap_content"
@@ -99,6 +108,7 @@ android:focusableInTouchMode="true"  >
 	                android:layout_height="wrap_content"
 	                android:layout_marginTop="40dip"
 	                android:layout_marginBottom="40dip"
+	                android:background="#2976B9"
 	                android:text="@string/msg_already_registered"
 	                android:gravity="center"
 	                android:textSize="20sp"
@@ -108,14 +118,6 @@ android:focusableInTouchMode="true"  >
 	        <!-- Registration Form Ends -->
         
         </RelativeLayout>
-        
-        <!-- Footer Start -->
-        <LinearLayout android:id="@+id/footer"
-                android:layout_width="fill_parent"
-                android:layout_height="90dip"
-                android:background="@layout/footer_repeat"
-                android:layout_alignParentBottom="true">
-        </LinearLayout>
-        <!-- Footer Ends -->
+      
   </RelativeLayout>
 </ScrollView>

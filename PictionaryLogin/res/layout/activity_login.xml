@@ -10,12 +10,25 @@
       android:layout_height="wrap_content"
       android:background="#2976B9" >
  
+      <!-- Footer Start -->
+      <LinearLayout
+          android:id="@+id/footer"
+          android:layout_width="fill_parent"
+          android:layout_height="90dip"
+          android:layout_alignParentBottom="true"
+          android:background="@layout/footer_repeat"
+          android:baselineAligned="true" >
+
+      </LinearLayout>
+      <!-- Footer Ends -->
+        
       <RelativeLayout
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerInParent="true" >
 
+          
 	        <!--  Header  Starts-->
 	
 	        <LinearLayout
@@ -94,23 +107,13 @@
 	                android:text="@string/msg_new_user"
 	                android:gravity="center"
 	                android:textSize="20sp"
+	                android:background="#2976B9"
 	                android:textColor="#FFFFFF"/>
 	 
 	        </LinearLayout>
 	        <!-- Login Form Ends -->
         
         </RelativeLayout>
-        
-        <!-- Footer Start -->
-        <LinearLayout
-            android:id="@+id/footer"
-            android:layout_width="fill_parent"
-            android:layout_height="90dip"
-            android:layout_alignParentBottom="true"
-            android:background="@layout/footer_repeat"
-            android:baselineAligned="true" >
-
-        </LinearLayout>
-        <!-- Footer Ends -->
+      
   </RelativeLayout>
 </ScrollView>
