@@ -12,5 +12,11 @@
     <string name="btn_login">Login</string>
     <string name="btn_register">Register</string>
     <string name="msg_new_user">New to Pictionary? Register here</string>
-    <string name="msg_already_registered">Already have an account? Login here</string>
+    <string name="msg_already_registered">Have an account? Login here</string>
+    <string name="msg_logging_in">Signing in&#8230;</string>
+    <string name="msg_login_fail">Failed to sign in:\u0020</string>
+    <string name="msg_registering">Registering&#8230;</string>
+    <string name="msg_register_fail">Failed to register:\u0020</string>
+    <string name="msg_passwords_do_not_match">Passwords do not match&#8230;</string>
+    
 </resources>

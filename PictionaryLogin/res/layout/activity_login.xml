@@ -6,8 +6,10 @@
   android:fillViewport="true">
 
   <RelativeLayout
+      android:id="@+id/loginView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:minHeight="450sp"
       android:background="#2976B9" >
  
       <!-- Footer Start -->
@@ -51,7 +53,6 @@
 	        <!-- Login Form -->
 	
 	        <LinearLayout
-	            xmlns:android="http://schemas.android.com/apk/res/android"
 	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
 	            android:layout_below="@id/header"
@@ -59,7 +60,9 @@
 	            android:padding="10dip" >
 	
 	          <!--  Username input -->
-	          <EditText android:layout_width="fill_parent"
+	          <EditText 
+	                android:id="@+id/inputUsername"
+	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
 	                android:layout_marginTop="20dip"
 	                android:layout_marginLeft="50dip"
@@ -73,7 +76,9 @@
 	                android:background="@layout/rounded_top_edittext"
 	                android:singleLine="true"/>
 	          <!--  Password input -->
-	          <EditText android:layout_width="fill_parent"
+	          <EditText 
+	                android:id="@+id/inputPassword"
+	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
 	                android:paddingBottom="10dip"
 	                android:inputType="textPassword"
@@ -102,8 +107,7 @@
 	          <TextView android:id="@+id/link_to_register"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:layout_marginTop="40dip"
-	                android:layout_marginBottom="40dip"
+	                android:layout_marginTop="20dip"
 	                android:text="@string/msg_new_user"
 	                android:gravity="center"
 	                android:textSize="20sp"

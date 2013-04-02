@@ -1,12 +1,14 @@
 package edu.msu.life.pictionary;
 
 import android.os.Bundle;
-import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
  
-public class LoginActivity extends Activity {
+public class LoginActivity extends FragmentActivity {
    
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -15,6 +17,10 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
  
         TextView registerView = (TextView) findViewById(R.id.link_to_register);
+        Button loginBtn = (Button) findViewById(R.id.btnLogin);
+        
+        final EditText inputUsername = (EditText) findViewById(R.id.inputUsername);
+        final EditText inputPassword = (EditText) findViewById(R.id.inputPassword);
  
         registerView.setOnClickListener(new View.OnClickListener() {
  
@@ -24,5 +30,20 @@ public class LoginActivity extends Activity {
                 startActivity(i);
             }
         });
+        
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+ 
+            public void onClick(View v) {
+                // Login and display the login dialog
+            	String username = inputUsername.getText().toString();
+            	String password = inputPassword.getText().toString();
+            	
+            	LoginDlg loginDlg = new LoginDlg(username, password);
+            	loginDlg.show(getSupportFragmentManager(), "load");
+            }
+        });
+    
+        
     }
+	
 }
