@@ -124,7 +124,7 @@ public class Cloud {
             xmlR.setInput(stream, UTF8);
             
             xmlR.nextTag();      // Advance to first tag
-            xmlR.require(XmlPullParser.START_TAG, null, "hatter");
+            xmlR.require(XmlPullParser.START_TAG, null, "user");
             
             String status = xmlR.getAttributeValue(null, "status");
             if(status.equals("no")) {
