@@ -45,8 +45,8 @@ public class RegisterActivity extends FragmentActivity {
             	String confirm = inputConfirm.getText().toString();
             	
             	if (password.equals(confirm)) {
-                	RegisterDlg registerDlg = new RegisterDlg("weinmatt", "password");
-                	registerDlg.show(getSupportFragmentManager(), "load");	
+                	RegisterDlg registerDlg = new RegisterDlg(username, password);
+                	registerDlg.show(getSupportFragmentManager(), "register");	
             	} else {
             		Context context = getApplicationContext();
             		int msgId = R.string.msg_passwords_do_not_match;
