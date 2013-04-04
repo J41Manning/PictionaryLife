@@ -31,7 +31,7 @@ public class Cloud {
     
 	private static final String MAGIC = "NechAtHa6RuzeR8x";
     
-    private static final String LOGIN_URL = ""; //TODO
+    private static final String LOGIN_URL = "https://www.cse.msu.edu/~siddiq39/cse476/pictionary-login.php"; //TODO
     private static final String REGISTER_URL = ""; //TODO
     private static final String UTF8 = "UTF-8";
     
@@ -55,9 +55,7 @@ public class Cloud {
      */
     public InputStream loginToCloud(String username, String password) {
 
-        String query = LOGIN_URL + "?user=" + username 
-        			 + "&pw=" + password
-        			 + "&magic=" + MAGIC;
+        String query = LOGIN_URL + "?user=" + username + "&pw=" + password+ "&magic=" + MAGIC;
         
         InputStream stream = null;
         try {
@@ -70,6 +68,7 @@ public class Cloud {
             }
             
             stream = conn.getInputStream();
+          //logStream(stream);
             return stream;
 
         } catch (MalformedURLException e) {
