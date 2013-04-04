@@ -36,9 +36,9 @@ public class Cloud {
     
     /**
      * Open a connection to login to the cloud.
-     * @return reference to an input stream or null if this fails
+     * @return true if logged in, false otherwise
      */
-    public InputStream loginToCloud(String username, String password) {
+    public boolean loginToCloud(String username, String password) {
 
         String query = LOGIN_URL + "?user=" + username + "&pw=" + password+ "&magic=" + MAGIC;
         
@@ -49,21 +49,25 @@ public class Cloud {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             int responseCode = conn.getResponseCode();
             if(responseCode != HttpURLConnection.HTTP_OK) {
-                return null;
+                return false;
             }
             
             stream = conn.getInputStream();
           //logStream(stream);
-            return stream;
+            return resultStatus(stream);
 
         } catch (MalformedURLException e) {
             // Should never happen
-            return null;
+            return false;
         } catch (IOException ex) {
-            return null;
+            return false;
         }
     }
     
+    /**
+     * Open a connection to register a new account.
+     * @return true if registered, false otherwise
+     */
     public boolean registerToCloud(String username, String password) {
 
         String query = REGISTER_URL + "?user=" + username 

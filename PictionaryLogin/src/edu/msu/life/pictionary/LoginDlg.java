@@ -63,66 +63,30 @@ public class LoginDlg extends DialogFragment {
         // Create the dialog box
         final AlertDialog dlg = builder.create();
         
-        // Get a reference to the view we are going to load into
+        // Get a reference to the login view
         final View view = (View)getActivity().findViewById(R.id.loginView);
         
-        /*
-         * Create a thread to load the hatting from the cloud
-         */
         new Thread(new Runnable() {
 
             @Override
             public void run() {
                 // Create a cloud object and get the XML
                 Cloud cloud = new Cloud();
-                InputStream stream = cloud.loginToCloud(LoginDlg.username, LoginDlg.password);
+                
+                final boolean success = cloud.loginToCloud(LoginDlg.username, LoginDlg.password);
                 
                 if(cancel) {
                     return;
                 }
-                
-                // Test for an error
-                boolean fail = stream == null;
-                if(!fail) {
-                    try {
-                        XmlPullParser xml = Xml.newPullParser();
-                        xml.setInput(stream, "UTF-8");       
-                        
-                        xml.nextTag();      // Advance to first tag
-                        xml.require(XmlPullParser.START_TAG, null, "user");
-                        
-                        String status = xml.getAttributeValue(null, "status");
-                        
-                        if(!status.equals("yes")) {
-                        	fail = true;
-                        }
-                        
-                    } catch(IOException ex) {
-                        fail = true;
-                    } catch(XmlPullParserException ex) {
-                        fail = true;
-                    } finally {
-                        try {
-                            stream.close(); 
-                        } catch(IOException ex) {
-                        }
-                    }
-                }
-                
-                final boolean fail1 = fail;
+             
                 view.post(new Runnable() {
 
                     @Override
                     public void run() {
                         
                     	dlg.dismiss();
-                        if(fail1) {
+                        if(!success) {
                             Toast.makeText(view.getContext(), getString(R.string.msg_login_fail) + username, Toast.LENGTH_SHORT).show();
-                        } else {
-                            // Success!
-                            if(getActivity() instanceof LoginActivity) {
-                                // ((LoginActivity)getActivity()).updateUI();
-                            }
                         }
                         
                     }
