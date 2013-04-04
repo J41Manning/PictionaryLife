@@ -1,63 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:foo="http://schemas.android.com/apk/res/edu.msu.life.pictionary"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
+  android:background="#4DA1EB"
   android:fillViewport="true">
 
-  <RelativeLayout
+  <LinearLayout
       android:id="@+id/loginView"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:background="#4DA1EB"
-      android:minHeight="450sp" >
-      
-      <!-- Footer Start -->
-      <LinearLayout
-          android:id="@+id/footer"
-          android:layout_width="fill_parent"
-          android:layout_height="90dip"
-          android:layout_alignParentBottom="true"
-          android:background="@layout/footer_repeat"
-          android:baselineAligned="true" >
-
-      </LinearLayout>
-      <!-- Footer Ends -->
-        
-      <RelativeLayout
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerInParent="true" >
-
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:orientation="vertical" >
           
-	        <!--  Header  Starts-->
-	
-	        <LinearLayout
-	            android:id="@+id/header"
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:paddingTop="20dip" >
-	
-		       <TextView
-		           android:id="@+id/logo"
-		           android:layout_width="fill_parent"
-		           android:layout_height="wrap_content"
-		           android:gravity="center"
-		           android:textSize="90sp"
-		           android:text="@string/app_title"
-		           android:textColor="#ffffff" />
-	
-	        </LinearLayout>
-	        <!--  Header Ends -->
-	 
-	        <!-- Login Form -->
-	
+        <!--  Header  Starts-->
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+	       <TextView
+	           android:id="@+id/logo"
+	           android:layout_width="fill_parent"
+	           android:layout_height="wrap_content"
+	           android:gravity="center"
+	           android:textSize="50sp"
+	           android:text="@string/app_title"
+	           android:textColor="#ffffff" />
+
+ 
+        <!-- Login Form -->
+
 	        <LinearLayout
 	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
-	            android:layout_below="@id/header"
 	            android:orientation="vertical"
 	            android:padding="10dip" >
 	
@@ -66,7 +49,6 @@
 	                android:id="@+id/inputUsername"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:layout_marginTop="20dip"
 	                android:layout_marginLeft="50dip"
 	                android:layout_marginRight="50dip"
 	                android:paddingBottom="10dip"
@@ -116,10 +98,14 @@
 	                android:textColor="#FFFFFF"/>
 	 
 	        </LinearLayout>
-	        <!-- Login Form Ends -->
-        
-        </RelativeLayout>
-      
-  </RelativeLayout>
-
+        </LinearLayout>
+        <!--  Header Ends -->
+              <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <!-- Login Form Ends -->
+     
+  </LinearLayout>
 </ScrollView>

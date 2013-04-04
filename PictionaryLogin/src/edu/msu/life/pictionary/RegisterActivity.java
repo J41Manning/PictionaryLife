@@ -3,6 +3,7 @@ package edu.msu.life.pictionary;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,10 @@ public class RegisterActivity extends FragmentActivity {
         
         setContentView(R.layout.activity_register);
  
+    	TextView logo = (TextView) findViewById(R.id.logo);
+    	Typeface font = Typeface.createFromAsset(getAssets(), "comesinhandy.ttf");  
+    	logo.setTypeface(font); 
+    	
         TextView loginScreen = (TextView) findViewById(R.id.link_to_login);
         Button registerBtn = (Button) findViewById(R.id.btnRegister);
         

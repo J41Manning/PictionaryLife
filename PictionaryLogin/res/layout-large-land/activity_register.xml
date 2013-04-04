@@ -33,15 +33,14 @@
 	        <LinearLayout
 	            android:id="@+id/header"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:paddingTop="20dip" >
+	            android:layout_height="wrap_content" >
 	
 		       <TextView
 		           android:id="@+id/logo"
 		           android:layout_width="fill_parent"
 		           android:layout_height="wrap_content"
 		           android:gravity="center"
-		           android:textSize="70sp"
+		           android:textSize="100sp"
 		           android:text="@string/app_title"
 		           android:textColor="#ffffff" />
 	
