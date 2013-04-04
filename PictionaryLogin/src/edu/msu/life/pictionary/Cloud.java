@@ -17,7 +17,7 @@ public class Cloud {
 	private static final String MAGIC = "NechAtHa6RuzeR8x";
     
     private static final String LOGIN_URL = "https://www.cse.msu.edu/~siddiq39/cse476/pictionary-login.php"; //TODO
-    private static final String REGISTER_URL = ""; //TODO
+    private static final String REGISTER_URL = "https://www.cse.msu.edu/~siddiq39/cse476/pictionary-register.php"; //TODO
     private static final String UTF8 = "UTF-8";
     
     public static void logStream(InputStream stream) {
