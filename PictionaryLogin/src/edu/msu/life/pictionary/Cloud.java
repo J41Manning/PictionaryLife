@@ -94,7 +94,7 @@ public class Cloud {
     }
     
     /**
-     * Parse the results and return the status
+     * Parse all the results and return the status
      * 
      * @param stream The result stream
      * @return False if status is "no" or exceptions are thrown, True otherwise
