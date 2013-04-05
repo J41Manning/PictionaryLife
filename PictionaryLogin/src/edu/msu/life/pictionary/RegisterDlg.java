@@ -79,6 +79,9 @@ public class RegisterDlg extends DialogFragment {
                     	dlg.dismiss();
                         if(!success) {
                             Toast.makeText(view.getContext(), getString(R.string.msg_register_fail) + username, Toast.LENGTH_SHORT).show();
+                        }  else {
+                        	Toast.makeText(view.getContext(), R.string.msg_register_succeed, Toast.LENGTH_SHORT).show();
+                        	((RegisterActivity) getActivity()).registered();
                         }
                         
                     }

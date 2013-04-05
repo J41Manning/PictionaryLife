@@ -2,6 +2,7 @@ package edu.msu.life.pictionary;
 
 import android.os.Bundle;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -59,4 +60,9 @@ public class RegisterActivity extends FragmentActivity {
             }
         });
     }
+	
+	void registered() {
+        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(i);
+	}
 }

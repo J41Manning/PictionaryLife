@@ -108,13 +108,13 @@
 		              android:textColor="#555" />
 		          
 		          <CheckBox
-		              android:id="@+id/checkBox1"
+		              android:id="@+id/checkboxRemember"
 		              android:layout_width="wrap_content"
 		              android:layout_height="wrap_content"
 		              android:layout_gravity="center_vertical"
 		              android:layout_marginLeft="10dip"
-		              android:text="@string/msg_keep_me_signed_in"
-		              android:textColor="#fff"/>
+		              android:text="@string/msg_remember"
+		              android:textColor="#fff" />
 
 		      </LinearLayout>
 	
