@@ -93,20 +93,34 @@
 	                android:singleLine="true"/>
 	          <!-- Login button -->
 	
-	          <Button
-	              android:id="@+id/btnLogin"
-	              android:layout_width="fill_parent"
-	              android:layout_height="wrap_content"
+	          <LinearLayout
+	              android:layout_width="match_parent"
+	              android:layout_height="wrap_content" 
 	              android:layout_marginLeft="50dip"
-	              android:layout_marginRight="50dip"
-	              android:layout_gravity="center_horizontal"
-	              android:layout_marginTop="10dip"
-	              android:textColor="#555"
-	              android:background="@layout/button_gradient"
-	              android:text="@string/btn_login" />
+	              android:layout_marginTop="10dip">
+			     
+		          <Button
+		              android:id="@+id/btnLogin"
+		              android:layout_width="91dp"
+		              android:layout_height="wrap_content"
+		              android:layout_gravity="left"
+		              android:background="@layout/button_gradient"
+		              android:text="@string/btn_login"
+		              android:textColor="#555" />
+		          
+		          <CheckBox
+		              android:id="@+id/checkboxRemember"
+		              android:layout_width="wrap_content"
+		              android:layout_height="wrap_content"
+		              android:layout_gravity="center_vertical"
+		              android:layout_marginLeft="10dip"
+		              android:text="@string/msg_remember"
+		              android:textColor="#fff" />
+
+		      </LinearLayout>
 	
 	          <!-- Link to Registration Screen -->
-	          <TextView android:id="@+id/link_to_register"
+	          <Button android:id="@+id/link_to_register"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
 	                android:layout_marginTop="20dip"

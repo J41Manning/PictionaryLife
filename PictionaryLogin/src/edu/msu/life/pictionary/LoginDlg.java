@@ -81,6 +81,7 @@ public class LoginDlg extends DialogFragment {
 	            // Test for an error
 	            boolean fail = stream == null;
 	            boolean wait = false;
+	            boolean alreadyLoggedIn = false;
 	            if(!fail) {
 	                try {
 	                    XmlPullParser xml = Xml.newPullParser();
@@ -99,6 +100,8 @@ public class LoginDlg extends DialogFragment {
 	                    
 	                    if (message.equals("wait")) {
 	                    	wait = true;
+	                    } else if (message.equals("already logged in")) {
+	                    	alreadyLoggedIn = true;
 	                    }
 	                    
 	                } catch(IOException ex) {
@@ -115,14 +118,17 @@ public class LoginDlg extends DialogFragment {
 	            
 	            final boolean fail1 = fail;
 	            final boolean wait1 = wait;
+	            final boolean alreadyLoggedIn1 = alreadyLoggedIn;
 	            view.post(new Runnable() {
 	
 	                @Override
 	                public void run() {
 	                    
 	                 	dlg.dismiss();
-	                     if(fail1) {
-	                         Toast.makeText(view.getContext(), getString(R.string.msg_login_fail) + username, Toast.LENGTH_SHORT).show();
+	                 	 if (alreadyLoggedIn1) {
+	                 		 Toast.makeText(view.getContext(), R.string.msg_already_logged_in, Toast.LENGTH_SHORT).show();
+	                 	 } else if(fail1) {
+	                         Toast.makeText(view.getContext(), R.string.msg_login_fail, Toast.LENGTH_SHORT).show();
 	                     } else {
 	                     	 ((LoginActivity) getActivity()).login(username, password, wait1);
 	                     }

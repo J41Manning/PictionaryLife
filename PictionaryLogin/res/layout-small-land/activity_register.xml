@@ -19,29 +19,13 @@
             android:layout_weight="1"
             />
         
-        <!--  Header  Starts-->
+        <!-- Registration Form -->
         <LinearLayout
             android:id="@+id/header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dip"
             android:orientation="vertical" >
-
-	       <TextView
-	           android:id="@+id/logo"
-	           android:layout_width="fill_parent"
-	           android:layout_height="wrap_content"
-	           android:gravity="center"
-	           android:textSize="50sp"
-	           android:text="@string/app_title"
-	           android:textColor="#ffffff" />
- 
-        <!-- Registration Form -->
-        <LinearLayout
-          android:orientation="vertical"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="10dip">
           <!-- Username Label -->
           <EditText 
                 android:id="@+id/inputUsername"
@@ -95,7 +79,7 @@
                 android:background="@layout/button_gradient"
                 android:text="@string/btn_register"/>
           <!-- Link to Login Screen -->
-          <TextView android:id="@+id/link_to_login"
+          <Button android:id="@+id/link_to_login"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dip"
@@ -105,8 +89,7 @@
                 android:textColor="#FFFFFF"/>
  
         </LinearLayout>
-        </LinearLayout>
-                      <View
+         <View
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"

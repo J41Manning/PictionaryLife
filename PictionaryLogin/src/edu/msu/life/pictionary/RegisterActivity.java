@@ -20,8 +20,10 @@ public class RegisterActivity extends FragmentActivity {
         setContentView(R.layout.activity_register);
  
     	TextView logo = (TextView) findViewById(R.id.logo);
-    	Typeface font = Typeface.createFromAsset(getAssets(), "comesinhandy.ttf");  
-    	logo.setTypeface(font); 
+    	if (logo != null) {
+	    	Typeface font = Typeface.createFromAsset(getAssets(), "comesinhandy.ttf");  
+	    	logo.setTypeface(font); 
+    	}
     	
         TextView loginScreen = (TextView) findViewById(R.id.link_to_login);
         Button registerBtn = (Button) findViewById(R.id.btnRegister);
@@ -46,16 +48,29 @@ public class RegisterActivity extends FragmentActivity {
             	String password = inputPassword.getText().toString();
             	String confirm = inputConfirm.getText().toString();
             	
-            	if (password.equals(confirm)) {
-                	RegisterDlg registerDlg = new RegisterDlg(username, password);
-                	registerDlg.show(getSupportFragmentManager(), "register");	
+            	boolean inputValid = !username.equals("") && !password.equals("");
+            	
+            	if (inputValid) {
+                	
+            		if (password.equals(confirm)) {
+                    	RegisterDlg registerDlg = new RegisterDlg(username, password);
+                    	registerDlg.show(getSupportFragmentManager(), "register");	
+                	} else {
+                		Context context = getApplicationContext();
+                		int msgId = R.string.msg_passwords_do_not_match;
+                		int duration = Toast.LENGTH_SHORT;
+
+                		Toast toast = Toast.makeText(context, msgId, duration);
+                		toast.show();
+                	}	
+            		
             	} else {
             		Context context = getApplicationContext();
-            		int msgId = R.string.msg_passwords_do_not_match;
+            		int msgId = R.string.msg_empty_username_or_password;
             		int duration = Toast.LENGTH_SHORT;
 
             		Toast toast = Toast.makeText(context, msgId, duration);
-            		toast.show();
+            		toast.show();	
             	}
             }
         });

@@ -66,33 +66,34 @@ public final class R {
         public static final int waiting=0x7f070003;
     }
     public static final class string {
-        public static final int action_settings=0x7f050018;
+        public static final int action_settings=0x7f050019;
         public static final int app_name=0x7f050000;
         public static final int app_title=0x7f050003;
         public static final int btn_login=0x7f050007;
         public static final int btn_register=0x7f050008;
-        public static final int hello_world=0x7f05001a;
-        public static final int img_boredguy_content=0x7f050012;
+        public static final int hello_world=0x7f05001b;
+        public static final int img_boredguy_content=0x7f050013;
         public static final int input_confirm_password=0x7f050006;
         public static final int input_password=0x7f050005;
         public static final int input_username=0x7f050004;
         public static final int menu_settings=0x7f050001;
+        public static final int msg_already_logged_in=0x7f05000d;
         public static final int msg_already_registered=0x7f05000a;
-        public static final int msg_could_take_awhile=0x7f050013;
-        public static final int msg_editing=0x7f050015;
-        public static final int msg_empty_username_or_password=0x7f05000d;
+        public static final int msg_could_take_awhile=0x7f050014;
+        public static final int msg_editing=0x7f050016;
+        public static final int msg_empty_username_or_password=0x7f05000e;
         public static final int msg_logging_in=0x7f05000b;
         public static final int msg_login_fail=0x7f05000c;
         public static final int msg_new_user=0x7f050009;
-        public static final int msg_passwords_do_not_match=0x7f050011;
-        public static final int msg_register_fail=0x7f05000f;
-        public static final int msg_register_succeed=0x7f050010;
-        public static final int msg_registering=0x7f05000e;
-        public static final int msg_remember=0x7f050016;
-        public static final int msg_waiting_for_player=0x7f050014;
-        public static final int title_activity_editing=0x7f050019;
+        public static final int msg_passwords_do_not_match=0x7f050012;
+        public static final int msg_register_fail=0x7f050010;
+        public static final int msg_register_succeed=0x7f050011;
+        public static final int msg_registering=0x7f05000f;
+        public static final int msg_remember=0x7f050017;
+        public static final int msg_waiting_for_player=0x7f050015;
+        public static final int title_activity_editing=0x7f05001a;
         public static final int title_activity_register=0x7f050002;
-        public static final int title_activity_waiting=0x7f050017;
+        public static final int title_activity_waiting=0x7f050018;
     }
     public static final class style {
         /** 

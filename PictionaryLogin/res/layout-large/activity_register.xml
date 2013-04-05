@@ -108,7 +108,7 @@
 	                android:background="@layout/button_gradient"
 	                android:text="@string/btn_register"/>
 	          <!-- Link to Login Screen -->
-	          <TextView android:id="@+id/link_to_login"
+	          <Button android:id="@+id/link_to_login"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
 	                android:layout_marginTop="20dip"

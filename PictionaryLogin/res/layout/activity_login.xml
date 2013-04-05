@@ -119,7 +119,7 @@
 		      </LinearLayout>
 	
 	          <!-- Link to Registration Screen -->
-	          <TextView android:id="@+id/link_to_register"
+	          <Button android:id="@+id/link_to_register"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
 	                android:layout_marginTop="20dip"

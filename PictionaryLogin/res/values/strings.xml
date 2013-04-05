@@ -13,7 +13,8 @@
     <string name="msg_new_user">New to Pictionary? Register here</string>
     <string name="msg_already_registered">Have an account? Login here</string>
     <string name="msg_logging_in">Signing in&#8230;</string>
-    <string name="msg_login_fail">Failed to sign in:\u0020</string>
+    <string name="msg_login_fail">Failed to sign in</string>
+    <string name="msg_already_logged_in">Already logged in&#8230;</string>
     <string name="msg_empty_username_or_password">Please enter username and password&#8230;</string>
     <string name="msg_registering">Registering&#8230;</string>
     <string name="msg_register_fail">Failed to register:\u0020</string>

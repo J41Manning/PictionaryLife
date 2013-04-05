@@ -105,7 +105,6 @@ public class LoginActivity extends FragmentActivity {
 	        Intent i = new Intent(getApplicationContext(), EditingActivity.class);
 	        startActivity(i);	
 		}
-        
 	}
 	
 }
