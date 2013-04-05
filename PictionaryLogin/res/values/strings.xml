@@ -2,13 +2,12 @@
 <resources>
 
     <string name="app_name">PictionaryLogin</string>
-    <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="app_title">Pictionary</string>
     <string name="input_username">Username&#8230;</string>
-	<string name="input_password">Password&#8230;</string>
-	<string name="input_confirm_password">Confirm Password&#8230;</string>
+    <string name="input_password">Password&#8230;</string>
+    <string name="input_confirm_password">Confirm Password&#8230;</string>
     <string name="btn_login">Login</string>
     <string name="btn_register">Register</string>
     <string name="msg_new_user">New to Pictionary? Register here</string>
@@ -18,5 +17,9 @@
     <string name="msg_registering">Registering&#8230;</string>
     <string name="msg_register_fail">Failed to register:\u0020</string>
     <string name="msg_passwords_do_not_match">Passwords do not match&#8230;</string>
-    
+    <string name="msg_waiting_for_player">Waiting for another player!</string>
+    <string name="msg_keep_me_signed_in">Keep Me Signed In</string>
+    <string name="title_activity_waiting">WaitingActivity</string>
+    <string name="action_settings">Settings</string>
+
 </resources>

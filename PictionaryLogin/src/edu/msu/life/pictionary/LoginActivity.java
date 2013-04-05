@@ -51,4 +51,9 @@ public class LoginActivity extends FragmentActivity {
         
     }
 	
+	public void login() {
+        Intent i = new Intent(getApplicationContext(), WaitingActivity.class);
+        startActivity(i);
+	}
+	
 }

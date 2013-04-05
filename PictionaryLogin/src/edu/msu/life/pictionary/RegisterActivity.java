@@ -1,7 +1,6 @@
 package edu.msu.life.pictionary;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
@@ -29,9 +28,6 @@ public class RegisterActivity extends FragmentActivity {
         final EditText inputUsername = (EditText) findViewById(R.id.inputUsername);
         final EditText inputPassword = (EditText) findViewById(R.id.inputPassword);
         final EditText inputConfirm = (EditText) findViewById(R.id.inputConfirm);
-        
-        // Get a reference to the view we are going to load into
-        final View view = (View)findViewById(R.id.loginView);
         
         loginScreen.setOnClickListener(new View.OnClickListener() {
  

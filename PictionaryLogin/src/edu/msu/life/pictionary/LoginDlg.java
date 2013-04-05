@@ -1,17 +1,10 @@
 package edu.msu.life.pictionary;
 
-import java.io.IOException;
-import java.io.InputStream;
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-
 import android.support.v4.app.DialogFragment;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Xml;
 import android.view.View;
 import android.widget.Toast;
 
@@ -87,6 +80,8 @@ public class LoginDlg extends DialogFragment {
                     	dlg.dismiss();
                         if(!success) {
                             Toast.makeText(view.getContext(), getString(R.string.msg_login_fail) + username, Toast.LENGTH_SHORT).show();
+                        } else {
+                        	((LoginActivity) getActivity()).login();
                         }
                         
                     }
